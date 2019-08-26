@@ -29,10 +29,9 @@ const router = express.Router()
 
 // INDEX
 // GET /posts
-router.get('/posts', requireToken, (req, res, next) => {
+router.get('/posts', (req, res, next) => {
   Post.find()
     .populate('owner')
-    // Deep Populate
     .populate('comments')
     .then(posts => {
       // `posts` will be an array of Mongoose documents
@@ -48,7 +47,7 @@ router.get('/posts', requireToken, (req, res, next) => {
 
 // SHOW
 // GET /posts/5a7db6c74d55bc51bdf39793
-router.get('/posts/:id', requireToken, (req, res, next) => {
+router.get('/posts/:id', (req, res, next) => {
   // req.params.id will be set based on the `:id` in the route
   Post.findById(req.params.id)
     .then(handle404)

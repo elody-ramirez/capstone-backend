@@ -31,7 +31,7 @@ const router = express.Router()
 
 // INDEX
 // GET /comments
-router.get('/comments', requireToken, (req, res, next) => {
+router.get('/comments', (req, res, next) => {
   Comment.find()
     .populate('owner')
     .populate('post')
@@ -49,7 +49,7 @@ router.get('/comments', requireToken, (req, res, next) => {
 
 // SHOW
 // GET /comments/5a7db6c74d55bc51bdf39793
-router.get('/comments/:id', requireToken, (req, res, next) => {
+router.get('/comments/:id', (req, res, next) => {
   // req.params.id will be set based on the `:id` in the route
   Comment.findById(req.params.id)
     .then(handle404)
