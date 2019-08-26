@@ -32,6 +32,7 @@ const router = express.Router()
 router.get('/posts', requireToken, (req, res, next) => {
   Post.find()
     .populate('owner')
+    // Deep Populate
     .populate('comments')
     .then(posts => {
       // `posts` will be an array of Mongoose documents
