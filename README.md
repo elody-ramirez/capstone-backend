@@ -59,8 +59,14 @@ Version 3
 - Mongoose
 - NoSQL
 - Heroku
-
 ### Catalog of Routes
+
+Verb         |	URI Pattern
+------------ | -------------
+POST | /sign-up
+POST | /sign-in
+DELETE | /sign-out
+PATCH | /change-password
 
 Verb         |	URI Pattern
 ------------ | -------------
