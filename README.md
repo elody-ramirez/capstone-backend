@@ -91,9 +91,9 @@ DELETE | /comments/:id
 ## Images
 
 #### App Screenshot:
-![screenshot](https://www.imgur.com/a/GuDx9Hw)
+![screenshot](https://i.imgur.com/EOOBZbF.png)
 
 ---
 
 #### ERD & Wireframes:
-![ERD & Wireframes](https://imgur.com/gallery/eCgbRTr)
+![ERD & Wireframes](https://i.imgur.com/2EhPojI.jpg.png)
